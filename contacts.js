@@ -32,3 +32,10 @@ function addContact(name, email, phone) {
   console.log("newContact", newContact);
   return newContact;
 }
+
+module.exports = {
+  listContacts,
+  getContactById,
+  addContact,
+  removeContact,
+};
