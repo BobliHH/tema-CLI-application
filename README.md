@@ -1,5 +1,3 @@
-
-
 Pasul 1
 Inițializează npm în proiect
 Crează fișier în rădăcina proiectului
@@ -17,26 +15,27 @@ Declară variabila contactsPath și oferă-i ca valoare calea către fișierul c
 Adaugă funcții pentru a lucra cu o colecție de contacte. În funcții, folosește modulul fs și metodele readFile() și writeFile()
 Exportă funcțiile create folosind module.exports
 contacts.js
-/*
- * Decomentează variabila și oferă-i o valoare
- * const contactsPath = ;
- */
+/\*
+
+- Decomentează variabila și oferă-i o valoare
+- const contactsPath = ;
+  \*/
 
 // TODO: documentează fiecare funcție
 function listContacts() {
-  // ...codul tău
+// ...codul tău
 }
 
 function getContactById(contactId) {
-  // ...codul tău
+// ...codul tău
 }
 
 function removeContact(contactId) {
-  // ...codul tău
+// ...codul tău
 }
 
 function addContact(name, email, phone) {
-  // ...codul tău
+// ...codul tău
 }
 Pasul 3
 Importă modulul contacts.js în fișierul index.js și testează funcțiile pentru lucrul cu datele de contact.
@@ -49,10 +48,10 @@ const argv = require("yargs").argv;
 
 // TODO: De refactorizat
 function invokeAction({ action, id, name, email, phone }) {
-  switch (action) {
-    case "list":
-      // ...
-      break;
+switch (action) {
+case "list":
+// ...
+break;
 
     case "get":
       // ... id
@@ -68,7 +67,8 @@ function invokeAction({ action, id, name, email, phone }) {
 
     default:
       console.warn("\x1B[31m Unknown action type!");
-  }
+
+}
 }
 
 invokeAction(argv);
@@ -77,11 +77,11 @@ De asemenea, poți utiliza modulul commander pentru a parsa argumentele liniei d
 const { Command } = require("commander");
 const program = new Command();
 program
-  .option("-a, --action <type>", "choose action")
-  .option("-i, --id <type>", "user id")
-  .option("-n, --name <type>", "user name")
-  .option("-e, --email <type>", "user email")
-  .option("-p, --phone <type>", "user phone");
+.option("-a, --action <type>", "choose action")
+.option("-i, --id <type>", "user id")
+.option("-n, --name <type>", "user name")
+.option("-e, --email <type>", "user email")
+.option("-p, --phone <type>", "user phone");
 
 program.parse(process.argv);
 
@@ -89,10 +89,10 @@ const argv = program.opts();
 
 // TODO: De refactorizat
 function invokeAction({ action, id, name, email, phone }) {
-  switch (action) {
-    case "list":
-      // ...
-      break;
+switch (action) {
+case "list":
+// ...
+break;
 
     case "get":
       // ... id
@@ -108,7 +108,8 @@ function invokeAction({ action, id, name, email, phone }) {
 
     default:
       console.warn("\x1B[31m Unknown action type!");
-  }
+
+}
 }
 
 invokeAction(argv);
@@ -117,19 +118,26 @@ Pasul 5
 Rulează comenzile în terminal și fă o captură de ecran separată pentru fiecare rezultat al comenzilor:
 
 # Obținerea și afișarea întregii liste de contacte sub forma unui tabel (console.table)
+
 node index.js --action list
+
 https://monosnap.com/file/ZaKn0F6GdliMkNUmBUmmQmfWGkUStU
 
 # Obținerea unei date de contact după id
+
 node index.js --action get --id 05olLMgyVQdWRwgKfg5J6
+
 https://monosnap.com/file/PJZMjKb8MZHe1qHNMyhhEvdc82brId
 
 # Adăugarea unui contact
+
 node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-22
 https://monosnap.com/file/eON05FZUhcibNOPrKf8JGtbUVGnODY
 
 # Ștergerea unui contact
+
 node index.js --action remove --id qdggE76Jtbfd9eWJHrssH
+
 https://monosnap.com/file/oMq1F5dHAIp9W4pLtssD48q6Z0naRu
 
 Pasul 6 - Predarea temei
