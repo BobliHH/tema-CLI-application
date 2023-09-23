@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "comander": "^0.0.1-security",
-    "commander": "^11.0.0"
+    "commander": "^11.0.0",
+    "nanoid": "^3.0.0"
   }
 }
