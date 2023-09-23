@@ -13,5 +13,9 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "comander": "^0.0.1-security",
+    "commander": "^11.0.0"
   }
 }
